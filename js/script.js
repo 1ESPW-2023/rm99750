@@ -41,7 +41,6 @@
 // });
 let tmp = 0;
 
-
 function mudaCor() {
     let r = Math.ceil(Math.random()*255);
     let g = Math.ceil(Math.random()*255);
@@ -56,42 +55,66 @@ function mudaCor() {
 
 }
 
-function pararTimeOut() {
-    clearTimeout(tmp);
+function alteraBanner1() {
+    
+    // let nr = Math.ceil(Math.random() *3);
+    const img1 = document.querySelector(".l-d > img");
+    const img2 = document.querySelector(".l-e > img");
+    img1.src = "./img/banner-lateral-1.png";
+    img2.src = "./img/banner-lateral-2.png";
+
+    setTimeout(alteraBanner2, 1000);
+
 }
-mudaCor()
+ 
+function alteraBanner2() {
+    
+    // let nr = Math.ceil(Math.random() *3);
+    const img1 = document.querySelector(".l-d > img");
+    const img2 = document.querySelector(".l-e > img");
+    img1.src = "./img/banner-lateral-2.png";
+    img2.src = "./img/banner-lateral-1.png";
 
-function alterarBanner1() {
+    setTimeout(alteraBanner3, 1000);
 
+}
+
+function alteraBanner3() {
+    
     // let nr = Math.ceil(Math.random() *3);
     const img1 = document.querySelector(".l-d > img");
     const img2 = document.querySelector(".l-e > img");
     img1.src = "./img/banner-lateral-1.png";
     img2.src = "./img/banner-lateral-2.png";
 
-    setTimeout(alterarBanner2, 1000);
-}   
+    setTimeout(alteraBanner1, 1000);
 
-function alterarBanner2() {
+}
 
-    // let nr = Math.ceil(Math.random() *3);
-    const img1 = document.querySelector(".l-d > img");
-    const img2 = document.querySelector(".l-e > img");
-    img1.src = "./img/banner-lateral-1.png";
-    img2.src = "./img/banner-lateral-2.png";
+alteraBanner1();
 
-    setTimeout(alterarBanner3, 1000);
-}   
+const btnOnOff = document.querySelector(".conteudo button");
 
-function alterarBanner3() {
+btnOnOff.addEventListener("click", ()=>{
+    const imgLampada = document.querySelector(".conteudo img");
+    if(btnOnOff.textContent == "LIGAR"){
+        btnOnOff.textContent = "DESLIGAR";
+        imgLampada.src = "./img/pic_bulbon.gif";
+    }else{
+        btnOnOff.textContent = "LIGAR";
+        imgLampada.src = "./img/pic_bulboff.gif";
+    }
+});
 
-    // let nr = Math.ceil(Math.random() *3);
-    const img1 = document.querySelector(".l-d > img");
-    const img2 = document.querySelector(".l-e > img");
-    img1.src = "./img/banner-lateral-1.png";
-    img2.src = "./img/banner-lateral-2.png";
+// function turnInOff() {
+//     const btnOnOff = document.querySelector(".conteudo button");
 
-    setTimeout(alterarBanner1, 1000);
-}   
+//     if(btnOnOff.textContent == "LIGAR"){
+//         btnOnOff.textContent = "DESLIGAR";
+//         imgLampada.src = "./img/pic_bulbon.gif";
+//     }else{
+//         btnOnOff.textContent = "LIGAR";
+//         imgLampada.src = "./img/pic_bulboff.gif";
+//     }
+// }
 
-alterarBanner1();
