@@ -52,12 +52,46 @@ function mudaCor() {
         el.style.backgroundColor = `rgb(${r},${g},${b})`;
     } )
 
-   tmp = setTimeout(mudaCor, 5000);
+   tmp = setTimeout(mudaCor, 1000);
 
 }
 
 function pararTimeOut() {
     clearTimeout(tmp);
 }
-
 mudaCor()
+
+function alterarBanner1() {
+
+    // let nr = Math.ceil(Math.random() *3);
+    const img1 = document.querySelector(".l-d > img");
+    const img2 = document.querySelector(".l-e > img");
+    img1.src = "./img/banner-lateral-1.png";
+    img2.src = "./img/banner-lateral-2.png";
+
+    setTimeout(alterarBanner2, 1000);
+}   
+
+function alterarBanner2() {
+
+    // let nr = Math.ceil(Math.random() *3);
+    const img1 = document.querySelector(".l-d > img");
+    const img2 = document.querySelector(".l-e > img");
+    img1.src = "./img/banner-lateral-1.png";
+    img2.src = "./img/banner-lateral-2.png";
+
+    setTimeout(alterarBanner3, 1000);
+}   
+
+function alterarBanner3() {
+
+    // let nr = Math.ceil(Math.random() *3);
+    const img1 = document.querySelector(".l-d > img");
+    const img2 = document.querySelector(".l-e > img");
+    img1.src = "./img/banner-lateral-1.png";
+    img2.src = "./img/banner-lateral-2.png";
+
+    setTimeout(alterarBanner1, 1000);
+}   
+
+alterarBanner1();
