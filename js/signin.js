@@ -16,11 +16,10 @@ let listaDeUsuarios = {}
 listaDeUsuarios.push(usuario1);
 listaDeUsuarios.push(usuario2);
 
-//listaDeUsuarios.forEach((usuario) => {
-    //console.log("NOME DE USUÁRIO: " + usuario.nomeUsuario);
-    //console.log("SENHA DE USUÁRIO: " + usuario.senhaUsuario);
-//});
+
 console.log(listaDeUsuarios);
+
+localStorage.setItem("listaUser"), JSON.stringify ;
 
 addEventListener("click", (evt)=>{
     console.log(evt.target);
@@ -31,18 +30,22 @@ addEventListener("click", (evt)=>{
 
         try{
 
-            listaDeUsuarios.forEach((usuario) => {
+            let listaUser = JSON.parse(localStorage.getItem("listaUser"));
+
+            listaUser.forEach((usuario) => {
 
                 if(usuarioInput == usuario.nomeUsuario && senhaInput == usuario.senhaUsuario){
                     throw "USUÁRIO VALIDADO!";
-                    
-                }else{
-
-                    throw "SENHA OU NOME DE USUÁRIO INVÁLIDO!";
                 }
             
             });
+            throw "SENHA OU NOME DE USUÁRIO INVÁLIDO"
         }catch(err){
+            if(err == "USUÁRIO VALIDADO!"){
+                console.log("USUÁRIO VALIDADO!");
+            }else{
+                console.log("SENHA OU NOME DE USUÁRIO INVÁLIDO");
+            }
 
         }
 
