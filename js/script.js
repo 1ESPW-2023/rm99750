@@ -22,6 +22,20 @@
 // //Recuperando elementos do HTML com querySelector
 // const liElements = document.querySelector("#item");
 // console.log(liElements);
+// const eyeButton = document.querySelector(".eye");
+
+// eyeButton.addEventListener("click",()=>{
+
+//     const inputSenha = document  .querySelector("#idPass");
+
+//     if(inputSenha.getAttribute("type") == "password"){
+//         inputSenha.setAttribute("type","text");
+//         eyeButton.setAttribute("class","fa fa-eye-slash eye");
+//     }else{
+//         inputSenha.setAttribute("type","password");
+//         eyeButton.setAttribute("class","fa fa-eye eye");
+//     }
+// });
 
 
 // //Recuperando elementos do HTML com querySelectorAll
@@ -104,6 +118,20 @@ btnOnOff.addEventListener("click", ()=>{
         btnOnOff.textContent = "LIGAR";
         imgLampada.src = "./img/pic_bulboff.gif";
     }
+});
+
+// function turnInOff() {
+//     const btnOnOff = document.querySelector(".conteudo button");
+
+//     if(btnOnOff.textContent == "LIGAR"){
+//         btnOnOff.textContent = "DESLIGAR";
+//         imgLampada.src = "./img/pic_bulbon.gif";
+//     }else{
+//         btnOnOff.textContent = "LIGAR";
+//         imgLampada.src = "./img/pic_bulboff.gif";
+//     }
+// }
+
 });
 
 // function turnInOff() {

@@ -7,11 +7,11 @@
 }
 
 body {
-  background-image: url("../images/blue pen.jpg");
+  background-image: url("../images/bg-signin.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-attachment: fixed;
-  background-position: center;
+  background-size: cover;
+  background-attachment: fixed
+  
 }
 
 .container {
@@ -62,7 +62,7 @@ h1{
 
 .label-float label{
   color: #272262;
-  pointer-events: none;
+  pointer-event: none;
   position: absolute;
   top: 0;
   left: 0;

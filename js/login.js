@@ -1,7 +1,7 @@
+
 const inputUser = document.querySelector("input[type='text']");
 
 inputUser.addEventListener("focus", ()=>{
-    if (inputUser.value.length != 0)
     inputUser.setAttribute("style","outline-color:#ff0000;")
 });
 
